@@ -1,2 +1,2 @@
 # Bioinformatics-Armony
-those are my solution to bioinformatics armony
+Those are my solution to bioinformatics armony
