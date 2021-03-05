@@ -1,0 +1,13 @@
+#still working
+from Bio import ExPASy
+import re
+
+def biological_processes(ID):
+    for s in ExPASy.get_sprot_raw(ID): # with ExPASy i can obtain all the string in the file of the protein
+        if re.search("GO:", s) != None and re.search("P:", s) != None: # searching for biological processes
+            s = s[s.find("P:") + 2:] # selecting just teh string of interest
+            s = s[:s.find(";")]
+            print(s)
+    return
+
+print(biological_processes(str(file = open('rosalind_dbpr.txt', "r"))))
